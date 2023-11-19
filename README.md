@@ -9,4 +9,4 @@
     Javascript
 
 # Preview Project
-    Project demo link <a href="https://css-custom-cursor.netlify.app/" target="_blank" rel="noopener">click here</a>
+    Project demo link [click here](css-custom-cursor.netlify.app)
