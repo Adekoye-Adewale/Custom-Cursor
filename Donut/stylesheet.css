@@ -1,0 +1,104 @@
+@font-face {
+    font-family: font-el;
+    src: url(../assests/nuckle_trial_extra_light-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-l;
+    src: url(../assests/nuckle_trial_light-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-r;
+    src: url(../assests/nuckle_trial_regular-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-m;
+    src: url(../assests/nuckle_trial_medium-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-sb;
+    src: url(../assests/nuckle_trial_semi_bold-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-b;
+    src: url(../assests/nuckle_trial_bold-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+
+body {
+    margin: 0px auto;
+    padding: 50px 20px;
+    font-family: font-r;
+    cursor: none;
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 98%);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8rem;
+}
+
+h1 {
+    font-family: font-b;
+    font-size: 3.2rem;
+}
+
+a {
+    font-family: font-sb;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.cursor__donut {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #000;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+}
+  
+.cursor__dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 250ms, height 250ms, filter 250ms;
+
+    mix-blend-mode: difference;
+    background-color: white;
+    color: black;
+}
+
+.cursor__dot__active {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0.8);
+}
+
+.link__hover {
+    border-color: blue;
+}
+
+.cursor__dot__link__hover {
+    width: 5px;
+    height: 5px;
+    opacity: 0.7;
+}
