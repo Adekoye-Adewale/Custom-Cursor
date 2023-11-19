@@ -1,0 +1,155 @@
+@font-face {
+    font-family: font-el;
+    src: url(../assests/nuckle_trial_extra_light-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-l;
+    src: url(../assests/nuckle_trial_light-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-r;
+    src: url(../assests/nuckle_trial_regular-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-m;
+    src: url(../assests/nuckle_trial_medium-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-sb;
+    src: url(../assests/nuckle_trial_semi_bold-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-b;
+    src: url(../assests/nuckle_trial_bold-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+body {
+    margin: 0px auto;
+    font-family: font-r;
+    /* cursor: none; */
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 98%);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8rem;
+}
+
+h1 {
+    font-family: font-b;
+    text-transform: capitalize;
+    font-size: 3.2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: font-r;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: font-m;
+    font-size: 1.2rem;
+}
+
+p, h1, h2, h3, ul, ol, li {
+    cursor: default;
+}
+
+a {
+    font-family: font-l;
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: red;
+}
+
+svg {
+    transition: all 250ms;
+}
+
+.title {
+    padding: 50px 20px;
+    background-color: #ddd;
+}
+
+a.git__link {
+    position: relative;
+}
+
+.git__link > svg:is(:hover, :focus-visible) {
+    transform: scale(1.2);
+}
+
+.git__link::after {
+    content: "Source code";
+    font-family: font-l;
+    font-size: 0.8rem;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-wrap: nowrap;
+    background-color: black;
+    padding: 2px 10px;
+    border-radius: 20px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: transform 150ms ease-in-out 350ms, opacity 350ms ease-in-out 150ms;
+}
+
+.git__link:is(:hover, :focus-visible)::after {
+    transform: translate(45px, -50%);
+    opacity: .9;
+    transition: transform 250ms ease-in-out 0ms, opacity 200ms ease-in-out 50ms;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.demo__list {
+    margin-top: -20px;
+}
+
+.demo__list > li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-left: -30px;
+}
+
+.cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    mix-blend-mode: difference;
+}
+
+.cursor__active {
+    width: 10px;
+    height: 10px;
+}
+
+.link__hover {
+    border: solid 1px rgb(42, 236, 250);
+    background-color: transparent;
+}
