@@ -1,0 +1,191 @@
+@font-face {
+    font-family: font-el;
+    src: url(../assests/nuckle_trial_extra_light-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-l;
+    src: url(../assests/nuckle_trial_light-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-r;
+    src: url(../assests/nuckle_trial_regular-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-m;
+    src: url(../assests/nuckle_trial_medium-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-sb;
+    src: url(../assests/nuckle_trial_semi_bold-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: font-b;
+    src: url(../assests/nuckle_trial_bold-webfont.woff2) format("woff2");
+    font-weight: normal;
+}
+
+
+body {
+    margin: 0px auto;
+    font-family: font-r;
+    cursor: none;
+    overflow-X: hidden;
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 98%);
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8rem;
+}
+
+h1 {
+    font-family: font-b;
+    font-size: 3.2rem;
+
+    animation: nlarge linear both;
+    animation-timeline: scroll();
+    animation-range: 0% 80vh;
+}
+
+@keyframes nlarge {
+    from {
+        transform: translateY(0%) scale(1);
+    }
+    to {
+        transform: translateY(-80%) scale(6);
+    }    
+}
+
+h2 {
+    font-family: font-b;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: font-r;
+    font-size: 2.2rem;
+}
+
+a {
+    font-family: font-sb;
+    font-size: 1.2rem;
+    text-decoration: none;  
+}
+
+a div {
+    background-color: black;
+    color: white;
+    padding: 22px 45px;
+    border-radius: 50px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+.hero {
+    margin-bottom: 4rem;
+    padding-top: 50vh;
+    padding-inline: 20px;
+}
+
+.fun__scroll {
+    width: 100%;
+    
+}
+
+.fun__scroll > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: scroll-r linear both;
+    animation-timeline: scroll();
+    animation-range: 0% 90vh;
+}
+
+@keyframes scroll-r {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }    
+}
+
+span {
+    font-family: font-b;
+    font-size: clamp(2rem, 7vw + 1.2rem , 4rem);
+    text-wrap: nowrap;
+}
+
+div.dot {
+    width: 25px;
+    min-width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background: linear-gradient(rgb(255, 0, 0), rgb(0, 0, 255));
+    animation: rotate-right linear both;
+    animation-timeline: scroll();
+    animation-range: 0% 150vh;
+}
+
+@keyframes rotate-right {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.disc__cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    mix-blend-mode: difference;
+}
+
+.cursor__active {
+    width: 10px;
+    height: 10px;
+}
+
+.link__hover {
+    width: 20vw;
+    height: 20vw;
+}
+
+section {
+    min-height: 90vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    background-color: black;
+    color: white;
+}
+
+section p {
+    animation: nlarge linear both;
+    animation-timeline: scroll();
+    animation-range: 0% 450vh;
+}
